@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset = "utf-8"/>
+	<title>Speedo</title>
+	<meta name="description" content="speedo" />
+	<meta name="keywords" content="speedo, групово, пазаруване" />
+	<meta name = "author" content = "Nikolay Chochev"/>
+	<meta name="robots" content="noindex, nofollow" />
+	<!-- disable iPhone inital scale -->
+	<meta name="viewport" content="width=device-width; initial-scale=1.0">
+	
+	<!-- CSS  -->
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	<link href="fonts/font-awesome.min.css" rel="stylesheet">
+	<link href="fonts/roboto.css" rel="stylesheet">
+	<link rel="shortcut icon" href="images/ico.ico" />
+	
+	<!-- Bootstrap Core CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- media queries css -->
+	<link href="css/responsive.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<link href="css/reveal.css" rel="stylesheet">
+	<!-- END CSS -->
+	
+	<!--[if IE]> 
+	<script src="js/html5.js"></script>
+	<![endif]-->
+	
+	<!-- END JS -->
+
+  </head>
+  <body>
+	
+	<!-- Header -->
+	<header id="header-main">
+	<!-- Header Top -->
+		<div class="header-top">
+			<div class="container">
+				<!-- Header Links Starts -->
+					<div class="col-sm-8 col-xs-12">
+						<div class="header-links">
+							<ul class="nav navbar-nav pull-left">
+								<li>
+									<a href="index.html">
+										<i class="fa fa-home" title="Home"></i>
+										<span class="hidden-sm hidden-xs">
+											Начало
+										</span>
+									</a>
+								</li>
+								<li>
+									<a href="#">	
+										<i class="fa fa-heart" title="Wish"></i>
+										<span class="hidden-sm hidden-xs">
+											Любими(0)
+										</span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<i class="fa fa-user" title="My Account"></i>
+										<span class="hidden-sm hidden-xs">
+											Моят профил
+										</span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<i class="fa fa-shopping-cart" title="Shopping Cart"></i>
+										<span class="hidden-sm hidden-xs">
+											Количка
+										</span>
+									</a>
+								</li>
+								<li>
+									<select class="form-control" style="margin-left: 50px;margin-top: 8px;">
+										<option value="sofia">София</option>
+										<option value="plovdiv">Пловдив</option>
+										<option value="kardjali">Кърджали</option>
+										<option value="varna">Варна</option>
+										<option value="haskovo">Хасково</option>
+									</select>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div id="login" class="reveal-modal">
+						<div class="modal-content">
+						  <div class="modal-header">
+							<h3 class="modal-title-site text-center"> Вход </h3>
+						  </div>
+						  <div class="modal-body">
+							<div class="form-group login-username">
+							  <div>
+								<input name="log" id="login-user" class="form-control input" size="20" placeholder="потребителско име" type="text">
+							  </div>
+							</div>
+							<div class="form-group login-password">
+							  <div>
+								<input name="Password" id="login-password" class="form-control input" size="20" placeholder="парола" type="password">
+							  </div>
+							</div>
+							<div class="form-group">
+							  <div>
+								<div class="checkbox login-remember">
+								  <label style="display: none;">
+									<input name="rememberme" value="forever" checked="checked" type="checkbox" style="display: none;">
+									Remember Me </label><span class="icr enabled checked" id="icr-1"><span class="icr__checkbox"></span><span class="icr__text">Remember Me</span></span>
+								</div>
+							  </div>
+							</div>
+							<div>
+							  <div>
+								<input name="submit" class="btn  btn-block btn-lg btn-primary" value="Вход" type="submit">
+							  </div>
+							</div>
+							<!--userForm--> 
+							
+						  </div>
+						  <div class="modal-footer">
+							<p class="text-center"> За първи път сте тук? <br><a data-toggle="modal" data-dismiss="modal" href="#ModalSignup" style="color:#000;"> Регистрирай се. </a> <br>
+							  <a href="#" style="color:#000;"> Забравена парола? </a> </p>
+						  </div>
+						</div>
+						<a class="close-reveal-modal">&#215;</a>
+					</div>
+					<div id="register" class="reveal-modal">
+						  <div class="modal-header">
+							<h3 class="modal-title-site text-center"> Регистрация </h3>
+						  </div>
+						  <div class="modal-body">
+							<div class="control-group"> <a class="fb_button btn  btn-block btn-lg " href="#"> Регистрирай се с фейсбук </a> </div>
+							<h5 style="padding:10px 0 10px 0;" class="text-center"> Или </h5>
+							<div class="form-group reg-username">
+							  <div>
+								<input name="login" class="form-control input" size="20" placeholder="потребилско име" type="text">
+							  </div>
+							</div>
+							<div class="form-group reg-email">
+							  <div>
+								<input name="reg" class="form-control input" size="20" placeholder="емайл" type="text">
+							  </div>
+							</div>
+							<div class="form-group reg-password">
+							  <div>
+								<input name="password" class="form-control input" size="20" placeholder="парола" type="password">
+							  </div>
+							</div>
+							<div class="form-group">
+							  <div>
+								<div class="checkbox login-remember">
+								  <label style="display: none;">
+									<input name="rememberme" id="rememberme" value="forever" checked="checked" type="checkbox" style="display: none;">
+									Запомни ме </label><span class="icr enabled checked" id="icr-2"><span class="icr__checkbox"></span><span class="icr__text">Запомни ме</span></span>
+								</div>
+							  </div>
+							</div>
+							<div>
+							  <div>
+								<input name="submit" class="btn  btn-block btn-lg btn-primary" value="Регистрирай" type="submit">
+							  </div>
+							</div>
+							<!--userForm--> 
+							
+						  </div>
+						  <div class="modal-footer">
+							<p class="text-center"> Вече сте член? <br><a data-toggle="modal" style="color:#000;" data-dismiss="modal" href="#ModalLogin"> Вход </a> </p>
+						  </div>
+						 <a class="close-reveal-modal">&#215;</a>
+					</div>
+				<!-- Login -->
+					<div class="col-sm-4 col-xs-12">
+						<ul class="nav navbar-nav pull-right">
+							<li>
+								<a href="#" data-reveal-id="login">
+									<i class="fa fa-home" title="Home"></i>
+									<span class="hidden-sm hidden-xs">
+										Вход
+									</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" data-reveal-id="register">
+									<i class="fa fa-home" title="Home"></i>
+									<span class="hidden-sm hidden-xs">
+										Регистрация
+									</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+					
+					
+				<!-- Login Ends -->
+			</div>
+		</div>
+		<!-- Header Top Ends -->
+		
+		<div class="container">
+		<!-- Main Header -->
+			<div class="main-header">
+				<div class="row">
+				<!-- Logo -->
+					<div class="col-md-3">
+						<div id="logo">
+							<a href="#"><img src="images/logo.png" title="Spice Shoppe" alt="Spice Shoppe" class="img-responsive" /></a>
+						</div>
+					</div>
+				<!-- Logo Starts -->
+				<!-- Search Starts -->
+					<div class="col-md-6">
+						<div id="search">
+							<div class="input-group">
+							  <input type="text" class="form-control input-lg" placeholder="Намери офертата за теб!">
+							  <span class="input-group-btn">
+								<button class="btn btn-lg" type="button">
+									<i class="fa fa-search"></i>
+								</button>
+							  </span>
+							</div>
+						</div>
+						<div id="slogan">
+							Живей с бензин в кръвта...
+						</div>
+					</div>
+				<!-- Search Ends -->
+				
+				<!-- Shopping Cart Starts -->
+					<div class="col-md-3 pull-right">
+						<div id="cart" class="btn-group btn-block">
+							<button type="button" data-toggle="dropdown" class="btn btn-block btn-lg dropdown-toggle">
+								<i class="fa fa-shopping-cart"></i>
+								<span class="hidden-md">Кошница:</span> 
+								<span id="cart-total">3 продукта</span>
+								<i class="fa fa-caret-down"></i>
+							</button>
+							<ul class="dropdown-menu pull-right">
+								<li>
+									<table class="table table-striped hcart">
+										<tr>
+											<td class="text-center">
+												<a href="product.html">
+													<img src="images/offers/offer.jpg" alt="image" title="image" class="img-thumbnail img-responsive" />
+												</a>
+											</td>
+											<td class="text-left">
+												<a href="product-full.html">
+													джанти
+												</a>
+											</td>
+											<td class="text-right">x 1</td>
+											<td class="text-right">120.68лв.</td>
+											<td class="text-center">
+												<a href="#">
+													<i class="fa fa-times"></i>
+												</a>
+											</td>
+										</tr>
+										<tr>
+											<td class="text-center">
+												<a href="product.html">
+													<img src="images/offers/offer.jpg" alt="image" title="image" class="img-thumbnail img-responsive" />
+												</a>
+											</td>
+											<td class="text-left">
+												<a href="product-full.html">
+													Гуми
+												</a>
+											</td>
+											<td class="text-right">x 2</td>
+											<td class="text-right">244 лв.</td>
+											<td class="text-center">
+												<a href="#">
+													<i class="fa fa-times"></i>
+												</a>
+											</td>
+										</tr>
+									</table>
+								</li>
+								<li>
+									<table class="table table-bordered total">
+										<tbody>
+											<tr>
+												<td class="text-right"><strong>Общо</strong></td>
+												<td class="text-left">200лв</td>
+											</tr>
+											<tr>
+												<td class="text-right"><strong>Такса</strong></td>
+												<td class="text-left">4.00 лв</td>
+											</tr>
+											<tr>
+												<td class="text-right"><strong>ДДС</strong></td>
+												<td class="text-left">30лв</td>
+											</tr>
+											<tr>
+												<td class="text-right"><strong>Всичко</strong></td>
+												<td class="text-left">230 лв</td>
+											</tr>
+										</tbody>
+									</table>
+									<p class="text-right btn-block1">
+										<a href="#">
+											Купи
+										</a>
+									</p>
+								</li>									
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		<!-- Main Header Ends -->
+		</div>
+	</header>
+	
+	<div id="main-content">
+		<div class="container">
+			<div class="col-md-3 sidebar">
+				<nav class="navbar navbar-default" role="navigation">
+
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+					</div>
+
+					<div class="collapse navbar-collapse cats">
+						<ul class="nav nav-stacked">
+							<li class="active"><a href="#">Аксесоари</a></li>
+							<li><a href="#">Джанти/гуми</a></li>
+							<li><a href="#">Двигателна система</a></li>
+							<li><a href="#">Освежители</a></li>              
+							<li><a href="#">Спирачна система</a></li>              
+							<li><a href="#">Скорости и трансмисия</a></li>        
+							<li><a href="#">Други</a></li>           
+						</ul>
+
+
+					</div><!-- /.navbar-collapse -->
+				</nav>
+			</div>
+			
+			<div class="col-lg-6">
+				<h2 class="dayly">Оферта на деня</h2>
+				<div id="day-deal">
+					<img src="images/banner.png" alt="slider">
+					
+					<div class="day-deal-desc">
+						<div class="col-lg-6">
+							<div class="deal-title">Намаление на масажчеее</div>
+							<div class="deal-location">София, България</div>
+							<div class="deal-price"><span>180лв.</span>Сега за 100лв.</div>
+						</div>
+						<div class="col-lg-6">
+							<button class="btn btn-default" style="margin-top: 15px; margin-left: 105px;">Влачи сега</button>
+						</div>
+					</div>
+				</div>	
+			</div>
+			<div class="col-lg-3 right-offer">
+				<h2>VIP оферти</h2>
+				<a href="#">
+					<div class="offer">
+						<img src="images/offers/masla.jpg" alt="offer" />
+						<div class="hidden-holder">
+							<div class="day-deal-desc">
+								<div class="vip-title">Намаление на нови гуми</div>
+								<div class="vip-location">София, България</div>
+								<div class="deal-price"><span>180лв.</span>Сега за 100лв.</div>
+							</div>
+						</div>
+					</div>
+				</a>
+				<a href="#">
+					<div class="offer">
+						<img src="images/banner.png" alt="offer" />
+						<div class="hidden-holder">
+							<div class="day-deal-desc">
+								<div class="vip-title">Направи си евтино турбо</div>
+								<div class="vip-location">София, България</div>
+								<div class="deal-price"><span>180лв.</span>Сега за 100лв.</div>
+							</div>
+						</div>
+					</div>
+				</a>
+			</div>
+		
+		</div>
+		
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<h2 class="main-heading">Най-новите оферти</h2>
+					<hr class="star-primary"/>
+				</div>
+			</div>
+			<div class="row">
+			
+				<div class="item">
+                    <!-- PRODUCT -->
+                    <div class="col-md-3">
+                        <div class="product-block">
+                            <div class="product-image">
+                                <a href="javascript:;">
+                                    <figure class="product-display">
+                                        <span class="product-label-special label">
+                                            <i>Намалено</i>
+                                            <span class="special">50%</span>
+                                        </span>
+                                        <img data-src="images/offers/djanta.jpg" alt="" class="lazyOwl product-mainpic" src="images/offers/djanta.jpg">
+                                        <img src="images/offers/djanta.jpg" alt="" class="product-secondpic">
+                                    </figure>
+                                </a>
+                            </div>
+                            <div class="product-meta">
+                                <div class="product-action">
+                                    <a href="javascript:;" class="addcart">
+                                        <i class="icon-basket"></i>
+                                        Купи сега
+                                    </a>
+                                  
+                                    <a href="javascript:;" class="wishlist">
+                                        <i class="fa fa-heart"></i>
+                                    </a>
+                                    
+                                    <a href="javascript:;" class="compare">
+                                        <i class="fa fa-retweet"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <a href="javascript:;">
+                                    <h5 class="product-name">Лети джанти</h5>
+                                </a>
+                                <div class="product-price">
+                                    <span><span class="strike-price">300лв.</span>500 лв.</span>
+                                </div>
+                            </div>
+                            <div class="product-rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+				</div>
+				
+				<div class="item">
+                    <!-- PRODUCT -->
+                    <div class="col-md-3">
+                        <div class="product-block">
+                            <div class="product-image">
+                                <a href="javascript:;">
+                                    <figure class="product-display">
+                                        <span class="product-label-special label">
+                                            <i>Намалено</i>
+                                            <span class="special">50%</span>
+                                        </span>
+                                        <img data-src="images/offer/bosh.png" alt="" class="lazyOwl product-mainpic" src="images/bosh.png">
+                                        <img src="images/offer/bosh.png" alt="" class="product-secondpic">
+                                    </figure>
+                                </a>
+                            </div>
+                            <div class="product-meta">
+                                <div class="product-action">
+                                    <a href="javascript:;" class="addcart">
+                                        <i class="icon-basket"></i>
+                                        Купи сега
+                                    </a>
+                                  
+                                    <a href="javascript:;" class="wishlist">
+                                        <i class="fa fa-heart"></i>
+                                    </a>
+                                    
+                                    <a href="javascript:;" class="compare">
+                                        <i class="fa fa-retweet"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <a href="javascript:;">
+                                    <h5 class="product-name">Лети джанти</h5>
+                                </a>
+                                <div class="product-price">
+                                    <span><span class="strike-price">300лв.</span>500 лв.</span>
+                                </div>
+                            </div>
+                            <div class="product-rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+				</div>
+				
+				<div class="item">
+                    <!-- PRODUCT -->
+                    <div class="col-md-3">
+                        <div class="product-block">
+                            <div class="product-image">
+                                <a href="javascript:;">
+                                    <figure class="product-display">
+                                        <span class="product-label-special label">
+                                            <i>Намалено</i>
+                                            <span class="special">50%</span>
+                                        </span>
+                                        <img data-src="images/offers/guma.jpg" alt="" class="lazyOwl product-mainpic" src="images/offers/guma.jpg">
+                                        <img src="images/offers/guma.jpg" alt="" class="product-secondpic">
+                                    </figure>
+                                </a>
+                            </div>
+                            <div class="product-meta">
+                                <div class="product-action">
+                                    <a href="javascript:;" class="addcart">
+                                        <i class="icon-basket"></i>
+                                        Купи сега
+                                    </a>
+                                  
+                                    <a href="javascript:;" class="wishlist">
+                                        <i class="fa fa-heart"></i>
+                                    </a>
+                                    
+                                    <a href="javascript:;" class="compare">
+                                        <i class="fa fa-retweet"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <a href="javascript:;">
+                                    <h5 class="product-name">Лети джанти</h5>
+                                </a>
+                                <div class="product-price">
+                                   <span><span class="strike-price">300лв.</span>500 лв.</span>
+                                </div>
+                            </div>
+                            <div class="product-rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+				</div>
+				
+				<div class="item">
+                    <!-- PRODUCT -->
+                    <div class="col-md-3">
+                        <div class="product-block">
+                            <div class="product-image">
+                                <a href="javascript:;">
+                                    <figure class="product-display">
+                                        <span class="product-label-special label">
+                                            <i>Намалено</i>
+                                            <span class="special">50%</span>
+                                        </span>
+                                         <img data-src="images/offers/djanta.jpg" alt="" class="lazyOwl product-mainpic" src="images/offers/djanta.jpg">
+                                        <img src="images/offers/djanta.jpg" alt="" class="product-secondpic">
+                                    </figure>
+                                </a>
+                            </div>
+                            <div class="product-meta">
+                                <div class="product-action">
+                                    <a href="javascript:;" class="addcart">
+                                        <i class="icon-basket"></i>
+                                        Купи сега
+                                    </a>
+                                  
+                                    <a href="javascript:;" class="wishlist">
+                                        <i class="fa fa-heart"></i>
+                                    </a>
+                                    
+                                    <a href="javascript:;" class="compare">
+                                        <i class="fa fa-retweet"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <a href="javascript:;">
+                                    <h5 class="product-name">Лети джанти</h5>
+                                </a>
+                                <div class="product-price">
+                                   <span><span class="strike-price">300лв.</span>500 лв.</span>
+                                </div>
+                            </div>
+                            <div class="product-rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+				</div>
+				
+			</div>
+		</div>
+		
+		<!-- Deal Grid Section -->
+		<section id="deal">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 text-center">
+						<h2 class="main-heading">Най-разглеждани Оферти</h2>
+						<hr class="star-primary"/>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="item">
+						<!-- PRODUCT -->
+						<div class="col-md-3">
+							<div class="product-block">
+								<div class="product-image">
+									<a href="javascript:;">
+										<figure class="product-display">
+											<span class="product-label-special label">
+												<i>Намалено</i>
+												<span class="special">50%</span>
+											</span>
+											<img data-src="images/offers/edge.jpg" alt="" class="lazyOwl product-mainpic" src="images/offers/edge.jpg">
+											<img src="images/offers/edge.jpg" alt="" class="product-secondpic">
+										</figure>
+									</a>
+								</div>
+								<div class="product-meta">
+									<div class="product-action">
+										<a href="javascript:;" class="addcart">
+											<i class="icon-basket"></i>
+											Купи сега
+										</a>
+									  
+										<a href="javascript:;" class="wishlist">
+											<i class="fa fa-heart"></i>
+										</a>
+										
+										<a href="javascript:;" class="compare">
+											<i class="fa fa-retweet"></i>
+										</a>
+									</div>
+								</div>
+								<div class="product-info">
+									<a href="javascript:;">
+										<h5 class="product-name">Лети джанти</h5>
+									</a>
+									<div class="product-price">
+										<span><span class="strike-price">300лв.</span>500 лв.</span>
+									</div>
+								</div>
+								<div class="product-rating">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="item">
+						<!-- PRODUCT -->
+						<div class="col-md-3">
+							<div class="product-block">
+								<div class="product-image">
+									<a href="javascript:;">
+										<figure class="product-display">
+											<span class="product-label-special label">
+												<i>Намалено</i>
+												<span class="special">50%</span>
+											</span>
+											<img data-src="images/offers/masla.jpg" alt="" class="lazyOwl product-mainpic" src="images/offers/masla2.jpg">
+											<img src="images/offers/masla.jpg" alt="" class="product-secondpic">
+										</figure>
+									</a>
+								</div>
+								<div class="product-meta">
+									<div class="product-action">
+										<a href="javascript:;" class="addcart">
+											<i class="icon-basket"></i>
+											Купи сега
+										</a>
+									  
+										<a href="javascript:;" class="wishlist">
+											<i class="fa fa-heart"></i>
+										</a>
+										
+										<a href="javascript:;" class="compare">
+											<i class="fa fa-retweet"></i>
+										</a>
+									</div>
+								</div>
+								<div class="product-info">
+									<a href="javascript:;">
+										<h5 class="product-name">Лети джанти</h5>
+									</a>
+									<div class="product-price">
+										<span><span class="strike-price">300лв.</span>500 лв.</span>
+									</div>
+								</div>
+								<div class="product-rating">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="item">
+						<!-- PRODUCT -->
+						<div class="col-md-3">
+							<div class="product-block">
+								<div class="product-image">
+									<a href="javascript:;">
+										<figure class="product-display">
+											<span class="product-label-special label">
+												<i>Намалено</i>
+												<span class="special">50%</span>
+											</span>
+											<img data-src="images/offers/djanta.jpg" alt="" class="lazyOwl product-mainpic" src="images/offers/djanta.jpg">
+											<img src="images/offers/djanta.jpg" alt="" class="product-secondpic">
+										</figure>
+									</a>
+								</div>
+								<div class="product-meta">
+									<div class="product-action">
+										<a href="javascript:;" class="addcart">
+											<i class="icon-basket"></i>
+											Купи сега
+										</a>
+									  
+										<a href="javascript:;" class="wishlist">
+											<i class="fa fa-heart"></i>
+										</a>
+										
+										<a href="javascript:;" class="compare">
+											<i class="fa fa-retweet"></i>
+										</a>
+									</div>
+								</div>
+								<div class="product-info">
+									<a href="javascript:;">
+										<h5 class="product-name">Лети джанти</h5>
+									</a>
+									<div class="product-price">
+									   <span><span class="strike-price">300лв.</span>500 лв.</span>
+									</div>
+								</div>
+								<div class="product-rating">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="item">
+						<!-- PRODUCT -->
+						<div class="col-md-3">
+							<div class="product-block">
+								<div class="product-image">
+									<a href="javascript:;">
+										<figure class="product-display">
+											<span class="product-label-special label">
+												<i>Намалено</i>
+												<span class="special">50%</span>
+											</span>
+											 <img data-src="images/offers/djanta.jpg" alt="" class="lazyOwl product-mainpic" src="images/offers/djanta.jpg">
+											<img src="images/offers/djanta.jpg" alt="" class="product-secondpic">
+										</figure>
+									</a>
+								</div>
+								<div class="product-meta">
+									<div class="product-action">
+										<a href="javascript:;" class="addcart">
+											<i class="icon-basket"></i>
+											Купи сега
+										</a>
+									  
+										<a href="javascript:;" class="wishlist">
+											<i class="fa fa-heart"></i>
+										</a>
+										
+										<a href="javascript:;" class="compare">
+											<i class="fa fa-retweet"></i>
+										</a>
+									</div>
+								</div>
+								<div class="product-info">
+									<a href="javascript:;">
+										<h5 class="product-name">Лети джанти</h5>
+									</a>
+									<div class="product-price">
+									   <span><span class="strike-price">300лв.</span>500 лв.</span>
+									</div>
+								</div>
+								<div class="product-rating">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+				
+				</div>
+		</section>
+		
+		</div>
+		
+	<!-- Footer -->
+	<footer class="text-center">
+        <div class="footer-above">
+            <div class="container">
+                <div class="row">
+					<div class="footer-col col-md-4">
+                        <ul class="footer-menu">
+							<li>
+								<a href="#">За нас</a>
+							</li>
+							<li>
+								<a href="#">Общи условия</a>
+							</li>
+							<li>
+								<a href="#">Контакти</a>
+							</li>
+						</ul>
+						
+					</div>
+					<div class="footer-col col-md-4">
+							<p>Абонирай се за нашия бюлетин</p>
+							<input id="footer-email-value" class="footer-input" style="clear: both;" type="text" name="email" value="Имейл...">
+							<input type="button" value="АБОНИРАЙ СЕ" class="footer-button" id="subscribe_button">			
+						<div class="footer-social">
+							<p style="padding-top: 20px;">Сподели в Facebook</p>
+							<a href="#" class="footer-fb"><img src="images/footer_fb.png" alt="facebook"></a>
+						</div>
+                    </div>
+                    <div class="footer-col col-md-4">
+                        <h3>За нас</h3>
+                        <p>© Speedo - сайтът за групово пазаруване. Всеки ден - страхотни нови оферти за твоя град! Всички права запазени 2014</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        Copyright &copy; Speedo 2014
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+	<!-- Footer Ends -->
+	
+	<!-- JS -->
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery.reveal.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/bootstrap-hover-dropdown.min.js"></script>
+</body>
+</html>

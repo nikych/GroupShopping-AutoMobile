@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset = "utf-8"/>
+	<title>Speedo</title>
+	<meta name="description" content="speedo" />
+	<meta name="keywords" content="speedo, групово, пазаруване" />
+	<meta name = "author" content = "Nikolay Chochev"/>
+	<meta name="robots" content="noindex, nofollow" />
+	<!-- disable iPhone inital scale -->
+	<meta name="viewport" content="width=device-width; initial-scale=1.0">
+	
+	<!-- CSS  -->
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	<link href="fonts/font-awesome.min.css" rel="stylesheet">
+	<link href="fonts/roboto.css" rel="stylesheet">
+	<link rel="shortcut icon" href="images/ico.ico" />
+	
+	<!-- Bootstrap Core CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- media queries css -->
+	<link href="css/responsive.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<link href="css/reveal.css" rel="stylesheet">
+	<!-- END CSS -->
+	
+	<!--[if IE]> 
+	<script src="js/html5.js"></script>
+	<![endif]-->
+	
+	<!-- END JS -->
+
+  </head>
+  <body>
+	
+	<!-- Header -->
+	<header id="header-main">
+	<!-- Header Top -->
+		<div class="header-top">
+			<div class="container">
+				<!-- Header Links Starts -->
+					<div class="col-sm-8 col-xs-12">
+						<div class="header-links">
+							<ul class="nav navbar-nav pull-left">
+								<li>
+									<a href="index.html">
+										<i class="fa fa-home" title="Home"></i>
+										<span class="hidden-sm hidden-xs">
+											Начало
+										</span>
+									</a>
+								</li>
+								<li>
+									<a href="#">	
+										<i class="fa fa-heart" title="Wish"></i>
+										<span class="hidden-sm hidden-xs">
+											Любими(0)
+										</span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<i class="fa fa-user" title="My Account"></i>
+										<span class="hidden-sm hidden-xs">
+											Моят профил
+										</span>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<i class="fa fa-shopping-cart" title="Shopping Cart"></i>
+										<span class="hidden-sm hidden-xs">
+											Количка
+										</span>
+									</a>
+								</li>
+								<li>
+									<select class="form-control" style="margin-left: 50px;margin-top: 8px;">
+										<option value="sofia">София</option>
+										<option value="plovdiv">Пловдив</option>
+										<option value="kardjali">Кърджали</option>
+										<option value="varna">Варна</option>
+										<option value="haskovo">Хасково</option>
+									</select>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div id="login" class="reveal-modal">
+						<div class="modal-content">
+						  <div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true"> × </button>
+							<h3 class="modal-title-site text-center"> Вход </h3>
+						  </div>
+						  <div class="modal-body">
+							<div class="form-group login-username">
+							  <div>
+								<input name="log" id="login-user" class="form-control input" size="20" placeholder="потребителско име" type="text">
+							  </div>
+							</div>
+							<div class="form-group login-password">
+							  <div>
+								<input name="Password" id="login-password" class="form-control input" size="20" placeholder="парола" type="password">
+							  </div>
+							</div>
+							<div class="form-group">
+							  <div>
+								<div class="checkbox login-remember">
+								  <label style="display: none;">
+									<input name="rememberme" value="forever" checked="checked" type="checkbox" style="display: none;">
+									Remember Me </label><span class="icr enabled checked" id="icr-1"><span class="icr__checkbox"></span><span class="icr__text">Remember Me</span></span>
+								</div>
+							  </div>
+							</div>
+							<div>
+							  <div>
+								<input name="submit" class="btn  btn-block btn-lg btn-primary" value="Вход" type="submit">
+							  </div>
+							</div>
+							<!--userForm--> 
+							
+						  </div>
+						  <div class="modal-footer">
+							<p class="text-center"> За първи път сте тук? <a data-toggle="modal" data-dismiss="modal" href="#ModalSignup"> Регистрирай се. </a> <br>
+							  <a href="#"> Забравена парола? </a> </p>
+						  </div>
+						</div>
+					</div>
+					<div id="register" class="reveal-modal">
+						  <div class="modal-header">
+							<h3 class="modal-title-site text-center"> Регистрация </h3>
+						  </div>
+						  <div class="modal-body">
+							<div class="control-group"> <a class="fb_button btn  btn-block btn-lg " href="#"> Регистрирай се с фейсбук </a> </div>
+							<h5 style="padding:10px 0 10px 0;" class="text-center"> Или </h5>
+							<div class="form-group reg-username">
+							  <div>
+								<input name="login" class="form-control input" size="20" placeholder="потребилско име" type="text">
+							  </div>
+							</div>
+							<div class="form-group reg-email">
+							  <div>
+								<input name="reg" class="form-control input" size="20" placeholder="емайл" type="text">
+							  </div>
+							</div>
+							<div class="form-group reg-password">
+							  <div>
+								<input name="password" class="form-control input" size="20" placeholder="парола" type="password">
+							  </div>
+							</div>
+							<div class="form-group">
+							  <div>
+								<div class="checkbox login-remember">
+								  <label style="display: none;">
+									<input name="rememberme" id="rememberme" value="forever" checked="checked" type="checkbox" style="display: none;">
+									Запомни ме </label><span class="icr enabled checked" id="icr-2"><span class="icr__checkbox"></span><span class="icr__text">Запомни ме</span></span>
+								</div>
+							  </div>
+							</div>
+							<div>
+							  <div>
+								<input name="submit" class="btn  btn-block btn-lg btn-primary" value="Регистрирай" type="submit">
+							  </div>
+							</div>
+							<!--userForm--> 
+							
+						  </div>
+						  <div class="modal-footer">
+							<p class="text-center"> Вече сте член? <a data-toggle="modal" data-dismiss="modal" href="#ModalLogin"> Вход </a> </p>
+						  </div>
+						 <a class="close-reveal-modal">&#215;</a>
+					</div>
+				<!-- Login -->
+					<div class="col-sm-4 col-xs-12">
+						<ul class="nav navbar-nav pull-right">
+							<li>
+								<a href="#" data-reveal-id="login">
+									<i class="fa fa-home" title="Home"></i>
+									<span class="hidden-sm hidden-xs">
+										Вход
+									</span>
+								</a>
+							</li>
+							<li>
+								<a href="#" data-reveal-id="register">
+									<i class="fa fa-home" title="Home"></i>
+									<span class="hidden-sm hidden-xs">
+										Регистрация
+									</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+					
+					
+				<!-- Login Ends -->
+			</div>
+		</div>
+		<!-- Header Top Ends -->
+		
+		<div class="container">
+		<!-- Main Header -->
+			<div class="main-header">
+				<div class="row">
+				<!-- Logo -->
+					<div class="col-md-3">
+						<div id="logo">
+							<a href="#"><img src="images/logo.png" title="Spice Shoppe" alt="Spice Shoppe" class="img-responsive" /></a>
+						</div>
+					</div>
+				<!-- Logo Starts -->
+				<!-- Search Starts -->
+					<div class="col-md-6">
+						<div id="search">
+							<div class="input-group">
+							  <input type="text" class="form-control input-lg" placeholder="Намери офертата за теб!">
+							  <span class="input-group-btn">
+								<button class="btn btn-lg" type="button">
+									<i class="fa fa-search"></i>
+								</button>
+							  </span>
+							</div>
+						</div>
+						<div id="slogan">
+							Живей с бензин в кръвта...
+						</div>
+					</div>
+				<!-- Search Ends -->
+				
+				<!-- Shopping Cart Starts -->
+					<div class="col-md-3 pull-right">
+						<div id="cart" class="btn-group btn-block">
+							<button type="button" data-toggle="dropdown" class="btn btn-block btn-lg dropdown-toggle">
+								<i class="fa fa-shopping-cart"></i>
+								<span class="hidden-md">Кошница:</span> 
+								<span id="cart-total">3 продукта</span>
+								<i class="fa fa-caret-down"></i>
+							</button>
+							<ul class="dropdown-menu pull-right">
+								<li>
+									<table class="table table-striped hcart">
+										<tr>
+											<td class="text-center">
+												<a href="product.html">
+													<img src="images/offers/offer.jpg" alt="image" title="image" class="img-thumbnail img-responsive" />
+												</a>
+											</td>
+											<td class="text-left">
+												<a href="product-full.html">
+													джанти
+												</a>
+											</td>
+											<td class="text-right">x 1</td>
+											<td class="text-right">120.68лв.</td>
+											<td class="text-center">
+												<a href="#">
+													<i class="fa fa-times"></i>
+												</a>
+											</td>
+										</tr>
+										<tr>
+											<td class="text-center">
+												<a href="product.html">
+													<img src="images/offers/offer.jpg" alt="image" title="image" class="img-thumbnail img-responsive" />
+												</a>
+											</td>
+											<td class="text-left">
+												<a href="product-full.html">
+													Гуми
+												</a>
+											</td>
+											<td class="text-right">x 2</td>
+											<td class="text-right">240 лв.</td>
+											<td class="text-center">
+												<a href="#">
+													<i class="fa fa-times"></i>
+												</a>
+											</td>
+										</tr>
+									</table>
+								</li>
+								<li>
+									<table class="table table-bordered total">
+										<tbody>
+											<tr>
+												<td class="text-right"><strong>Общо</strong></td>
+												<td class="text-left">200лв</td>
+											</tr>
+											<tr>
+												<td class="text-right"><strong>Такса</strong></td>
+												<td class="text-left">4.00 лв</td>
+											</tr>
+											<tr>
+												<td class="text-right"><strong>ДДС</strong></td>
+												<td class="text-left">30лв</td>
+											</tr>
+											<tr>
+												<td class="text-right"><strong>Всичко</strong></td>
+												<td class="text-left">230 лв</td>
+											</tr>
+										</tbody>
+									</table>
+									<p class="text-right btn-block1">
+										<a href="#">
+											Купи
+										</a>
+									</p>
+								</li>									
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		<!-- Main Header Ends -->
+		</div>
+	</header>
+	
+	<div id="main-content">
+		<div class="container">
+			<div class="col-md-3 sidebar">
+				<nav class="navbar navbar-default" role="navigation">
+
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+					</div>
+
+					<div class="collapse navbar-collapse cats">
+						<ul class="nav nav-stacked">
+							<li class="active"><a href="#">Аксесоари</a></li>
+							<li><a href="#">Джанти/гуми</a></li>
+							<li><a href="#">Освежители</a></li>
+							<li><a href="#">Други</a></li>              
+							<li><a href="#">Други</a></li>              
+							<li><a href="#">Други</a></li>        
+							<li><a href="#">Други</a></li>           
+						</ul>
+
+
+					</div><!-- /.navbar-collapse -->
+				</nav>
+				
+			</div>
+			
+			<div class="col-md-9">
+				<h2>Last Minute! Боров въздух и прохлада в хотелски комплекс Айсберг 4*, Боровец, от 1 до 7 нощувки, закуски и вечери, настаняване в двойна стая на цени от 78лв за двама!</h2>
+                <div class="col-md-9 thumbnail">
+                    <img class="img-responsive" src="http://placehold.it/800x300" alt="" />
+                    <div class="caption-full">
+                        <h4 class="pull-right">25лв.</h4>
+                        <h4><a href="#">Продукт име</a>
+                        </h4>
+                        <p>See more snippets like these online store reviews at <a target="_blank" href="http://bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
+                        <p>Want to make these reviews work? Check out
+                            <strong><a href="http://maxoffsky.com/code-blog/laravel-shop-tutorial-1-building-a-review-system/">this building a review system tutorial</a>
+                            </strong>over at maxoffsky.com!</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                    </div>
+                    <div class="ratings">
+                        <p class="pull-right">3 ревюта</p>
+                        <p>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star-empty"></span>
+                            4.0 звезди
+                        </p>
+                    </div>
+
+                <div class="well">
+
+                    <div class="text-right">
+                        <a class="btn btn-success">Остави мнение</a>
+                    </div>
+
+                    <hr>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star-empty"></span>
+                            Анонимен
+                            <span class="pull-right">преди 2 дена</span>
+                            <p>Е този продукт ми шашна и най-големите съмнения за качество и цена...</p>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star-empty"></span>
+                            Анонимен
+                            <span class="pull-right">преди 2 дена</span>
+                            <p>Е този продукт ми шашна и най-големите съмнения за качество и цена...</p>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star"></span>
+                            <span class="glyphicon glyphicon-star-empty"></span>
+                            Анонимен
+                            <span class="pull-right">преди 2 дена</span>
+                            <p>Е този продукт ми шашна и най-големите съмнения за качество и цена...</p>
+                        </div>
+                    </div>
+
+                </div>
+				
+				<div class="product-info-box">
+						<h4 class="heading">Други оферти за Вас</h4>
+					<!-- Products Row Starts -->
+						<div class="row">
+						<!-- Product #1 Starts -->
+							<div class="col-md-4 col-sm-6">
+								<div class="product-col">
+									<div class="image">
+										<img src="images/product-images/pimg1.jpg" alt="product" class="img-responsive">
+									</div>
+									<div class="caption">
+										<h4><a href="product.html">Качествени джанти</a></h4>
+										<div class="description">
+											Най-добрите джанти и гуми при нас...
+										</div>
+										<div class="price">
+											<span class="price-new">100 лв.</span> 
+											<span class="price-old">180 лв.</span>
+										</div>
+										<div class="cart-button button-group">
+											<button type="button" title="" class="btn btn-wishlist" data-original-title="Wishlist">
+												<i class="fa fa-heart"></i>
+											</button>
+											<button type="button" title="" class="btn btn-compare" data-original-title="Compare">
+												<i class="fa fa-bar-chart-o"></i>
+											</button>
+											<button type="button" class="btn btn-cart">
+												Купи
+												<i class="fa fa-shopping-cart"></i> 
+											</button>									
+										</div>
+									</div>
+								</div>
+							</div>
+						<!-- Product #1 Ends -->
+						<!-- Product #2 Starts -->
+							<div class="col-md-4 col-sm-6">
+								<div class="product-col">
+									<div class="image">
+										<img src="images/product-images/pimg1.jpg" alt="product" class="img-responsive">
+									</div>
+									<div class="caption">
+										<h4><a href="product.html">Качествени джанти</a></h4>
+										<div class="description">
+											Най-добрите джанти и гуми при нас...
+										</div>
+										<div class="price">
+											<span class="price-new">100 лв.</span> 
+											<span class="price-old">180 лв.</span>
+										</div>
+										<div class="cart-button button-group">
+											<button type="button" title="" class="btn btn-wishlist" data-original-title="Wishlist">
+												<i class="fa fa-heart"></i>
+											</button>
+											<button type="button" title="" class="btn btn-compare" data-original-title="Compare">
+												<i class="fa fa-bar-chart-o"></i>
+											</button>
+											<button type="button" class="btn btn-cart">
+												Купи
+												<i class="fa fa-shopping-cart"></i> 
+											</button>									
+										</div>
+									</div>
+								</div>
+							</div>
+						<!-- Product #2 Ends -->
+						<!-- Product #3 Starts -->
+							<div class="col-md-4 col-sm-6">
+								<div class="product-col">
+									<div class="image">
+										<img src="images/product-images/pimg1.jpg" alt="product" class="img-responsive">
+									</div>
+									<div class="caption">
+										<h4><a href="product.html">Качествени джанти</a></h4>
+										<div class="description">
+											Най-добрите джанти и гуми при нас...
+										</div>
+										<div class="price">
+											<span class="price-new">100 лв.</span> 
+											<span class="price-old">180 лв.</span>
+										</div>
+										<div class="cart-button button-group">
+											<button type="button" title="" class="btn btn-wishlist" data-original-title="Wishlist">
+												<i class="fa fa-heart"></i>
+											</button>
+											<button type="button" title="" class="btn btn-compare" data-original-title="Compare">
+												<i class="fa fa-bar-chart-o"></i>
+											</button>
+											<button type="button" class="btn btn-cart">
+												Купи
+												<i class="fa fa-shopping-cart"></i> 
+											</button>									
+										</div>
+									</div>
+								</div>
+							</div>
+						<!-- Product #3 Ends -->
+						</div>
+					<!-- Products Row Ends -->
+					</div>
+
+            </div>
+			<div class="col-md-3 offer-details">
+				ТОП цена
+				<div class="offer-price"><span>100лв.</span>77лв.</div>
+				<button name="submit" class="btn-red" value="Купи" type="button">Купи</button>
+				<div class="time">135:19:45</div>
+				<div class="active">Сделката е активна <br><br>6 ЗАКУПЕНИ</div>
+			</div>
+		
+		</div>
+		
+	</div>
+		
+	<!-- Footer -->
+	<footer class="text-center">
+        <div class="footer-above">
+            <div class="container">
+                <div class="row">
+					<div class="footer-col col-md-4">
+                        <ul class="footer-menu">
+							<li>
+								<a href="#">За нас</a>
+							</li>
+							<li>
+								<a href="#">Общи условия</a>
+							</li>
+							<li>
+								<a href="#">Контакти</a>
+							</li>
+						</ul>
+						
+					</div>
+					<div class="footer-col col-md-4">
+							<p>Абонирай се за нашия бюлетин</p>
+							<input id="footer-email-value" class="footer-input" style="clear: both;" type="text" name="email" value="Имейл...">
+							<input type="button" value="АБОНИРАЙ СЕ" class="footer-button" id="subscribe_button">			
+						<div class="footer-social">
+							<p style="padding-top: 20px;">Сподели в Facebook</p>
+							<a href="#" class="footer-fb"><img src="images/footer_fb.png" alt="facebook"></a>
+						</div>
+                    </div>
+                    <div class="footer-col col-md-4">
+                        <h3>За нас</h3>
+                        <p>© Speedo - сайтът за групово пазаруване. Всеки ден - страхотни нови оферти за твоя град! Всички права запазени 2014</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        Copyright &copy; Speedo 2014
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+	<!-- Footer Ends -->
+	
+	<!-- JS -->
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery.reveal.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/bootstrap-hover-dropdown.min.js"></script>
+</body>
+</html>
